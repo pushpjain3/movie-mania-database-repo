@@ -3,8 +3,8 @@ import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 // import { BiCameraMovie } from "react-icons/bi";
-import { Link } from 'react-router-dom';
-import { BiCameraMovie } from "react-icons/bi"
+import { Link } from "react-router-dom";
+import { BiCameraMovie } from "react-icons/bi";
 import { auth, provider } from "../firebase";
 import {
   selectUserName,
@@ -65,17 +65,17 @@ const Header = (props) => {
         <img src="/images/logo.svg" alt="Disney+" />
       </Logo> */}
       <Link to="/home">
-              <i>
-                <BiCameraMovie />
-              </i>
-            </Link>
+        <i>
+          <BiCameraMovie />
+        </i>
+      </Link>
 
       {!userName ? (
         <Login onClick={handleAuth}>Login</Login>
       ) : (
         <>
           <NavMenu>
-          {/* <Link to="/">
+            {/* <Link to="/">
               <i>
                 <BiCameraMovie />
               </i>
@@ -130,7 +130,6 @@ const Nav = styled.nav`
   padding: 0 36px;
   letter-spacing: 16px;
   z-index: 3;
-  font-size: 2.2rem;
 `;
 
 const Logo = styled.a`
