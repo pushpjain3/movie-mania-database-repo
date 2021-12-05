@@ -5,6 +5,10 @@ html {
 * {
   box-sizing: border-box;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
+
 
 body {
   background-color: #040714;
