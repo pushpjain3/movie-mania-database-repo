@@ -130,7 +130,7 @@ const Nav = styled.nav`
   padding: 0 36px;
   letter-spacing: 16px;
   z-index: 3;
-  font-size: 2rem;
+  font-size: 2.2rem;
 `;
 
 const Logo = styled.a`
