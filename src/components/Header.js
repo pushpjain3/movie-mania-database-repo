@@ -2,6 +2,9 @@ import { useEffect } from "react";
 import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
+// import { BiCameraMovie } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { BiCameraMovie } from "react-icons/bi"
 import { auth, provider } from "../firebase";
 import {
   selectUserName,
@@ -58,31 +61,41 @@ const Header = (props) => {
 
   return (
     <Nav>
-      <Logo>
+      {/* <Logo>
         <img src="/images/logo.svg" alt="Disney+" />
-      </Logo>
+      </Logo> */}
+      <Link to="/home">
+              <i>
+                <BiCameraMovie />
+              </i>
+            </Link>
 
       {!userName ? (
         <Login onClick={handleAuth}>Login</Login>
       ) : (
         <>
           <NavMenu>
+          {/* <Link to="/">
+              <i>
+                <BiCameraMovie />
+              </i>
+            </Link> */}
             <a href="/home">
               <img src="/images/home-icon.svg" alt="HOME" />
               <span>HOME</span>
             </a>
-            <a>
+            {/* <a>
               <img src="/images/search-icon.svg" alt="SEARCH" />
               <span>SEARCH</span>
-            </a>
+            </a> */}
             <a>
               <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
               <span>WATCHLIST</span>
             </a>
-            <a>
+            {/* <a>
               <img src="/images/original-icon.svg" alt="ORIGINALS" />
               <span>ORIGINALS</span>
-            </a>
+            </a> */}
             <a>
               <img src="/images/movie-icon.svg" alt="MOVIES" />
               <span>MOVIES</span>
@@ -117,6 +130,7 @@ const Nav = styled.nav`
   padding: 0 36px;
   letter-spacing: 16px;
   z-index: 3;
+  font-size: 2rem;
 `;
 
 const Logo = styled.a`
